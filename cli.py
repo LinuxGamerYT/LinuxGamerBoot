@@ -1,4 +1,4 @@
-import os
+from os import system as sys
 
 print("""
 
@@ -18,4 +18,4 @@ print("""
 
 """)
 cmd = input("root@root$ ")
-os.system(cmd)
+sys(cmd)
