@@ -1,5 +1,7 @@
-import os
-import time
+#start
+from os import system as sys
+from time import sleep as sl
+
 #logo
 print("""
 
@@ -11,39 +13,37 @@ print("""
 ╚══════╝╚═╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝░╚═════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚═╝╚═════╝░░╚════╝░░╚════╝░░░░╚═╝░░░
 
 """)
+
 #options
 print("""
+LinuxGamerBoot 1.1
+
 1. command-line(cli) mode
 2. start <os-name>
 3. reboot
-4. exit
+4. shutdown
 """)
 #your input
 boot = input()
 #boot chooses
 if boot == '1':
-	print("""
-	use this command for cli-mode:
-	$ sudo python cli.py
-	""")
-	time.sleep(4)
-	os.system("exit")
+	print("starting cli-mode...")
+	sl(4)
+	sys("python3 cli.py")
 if boot ==  '2':
-	print("""
-	use this command to start your os:
-	$ sudo python <filename>.py
-	""")
-	time.sleep(4)
-	os.system("exit")
+	print("starting os...")
+	sl(4)
+	sys("python3 home.py")
 	# <filename> is editable
 if boot == '3':
-	print("""
-	use this command to reboot:
-	$ sudo python boot.py
-	""")
-	time.sleep(4)
-	os.system("exit")
+	print("rebooting...")
+	sl(4)
+	sys("exit")
+	sl(4)
+	sys("python3 boot.py")
 if boot == '4':
+	print("shutting down...")
 	time.sleep(0.5)
 	os.system("exit")
+	
 # end
